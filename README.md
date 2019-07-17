@@ -22,9 +22,26 @@ This project is about building a Clocked Comparator to be used in a 4-bit Flash 
 
 Ideally, How the switches & the coupling capacitors work:<br/> <pre/>
 During clk = 1:	<pre/>   𝑉_𝐶𝑎𝑝 = 𝑉_𝐶𝑀  − 𝑉_𝐼𝑁  <br/>   𝑉_𝑔 = 𝑉_𝐶𝑀 </pre> 
-During clk = 0:	<pre/>  𝑉_𝑔  =  𝑉_𝐶𝑎𝑝 + 𝑉_𝑅𝑒𝑓 = 𝑽_𝑪𝑴 − (𝑽_𝑰𝑵  − 𝑽_𝑹𝒆𝒇) </pre> <br/> </pre> 
+During clk = 0:	<pre/>  𝑉_𝑔  =  𝑉_𝐶𝑎𝑝 + 𝑉_𝑅𝑒𝑓 = 𝑽_𝑪𝑴 − (𝑽_𝑰𝑵  − 𝑽_𝑹𝒆𝒇) <br/> 
+𝑉_𝑔n  = 𝑽_𝑪𝑴 − (𝑽_𝑰𝑵n  − 𝑽_𝑹𝒆𝒇n) <br/> 
+𝑉_𝑔p  = 𝑽_𝑪𝑴 − (𝑽_𝑰𝑵p  − 𝑽_𝑹𝒆𝒇p) <br/>
+𝑉in(to_Preamp)  =  𝑉_𝑔p - 𝑉_𝑔n  =  − (𝑽_𝑰𝑵p  − 𝑽_𝑹𝒆𝒇p) + (𝑽_𝑰𝑵n  − 𝑽_𝑹𝒆𝒇n) = 2 * (𝑽_𝑰𝑵n  − 𝑽_𝑹𝒆𝒇n) <br/>
+</pre> <br/> </pre>
+*****************
+## **_Overdrive test_**:
+### Testbench:
+![testbench](https://user-images.githubusercontent.com/27668656/61345219-190d8800-a809-11e9-875e-82018d5c8e6c.png)<br/>
+In this test, We want to find the smallest difference between Vin_p & Vin_n that the Comparator can detect (give the right output value), & this tells us the resolution of this comparator at this frequency.<br/>
+![testbench](https://user-images.githubusercontent.com/27668656/61346229-be762b00-a80c-11e9-839a-d46364ac2afa.png)
 
+*****************
+## **_4-bit Differential Flash ADC_**:
+![flash ADC](https://user-images.githubusercontent.com/27668656/61346320-190f8700-a80d-11e9-8da7-23e72b3fd2d1.png)
 
+## Whole System Testbench:
+![wholesystem](https://user-images.githubusercontent.com/27668656/61346632-6fc99080-a80e-11e9-9e35-75b61bcdee1e.png)
+
+![wholesystem](https://user-images.githubusercontent.com/27668656/61346665-91c31300-a80e-11e9-85c4-183adbb95ab2.png)
 
 *****************
 ### References:
@@ -32,6 +49,6 @@ My project on google drive:<br/>
 https://drive.google.com/drive/folders/1W9ip4MpMZNf3IQsoFQkhgg6QaUya4Yp4 <br/>
 EE288 Lecture Notes:<br/>
 https://drive.google.com/drive/folders/12Qqfw_TX1i7dvVVYXksaSdHV4gth1OD5 <br/>
-Videos on how to create VerilogA blocks for ADCs:
-https://drive.google.com/drive/folders/1GAobRzzFTkD6ywqSdDJUsO5g2C06hh_i <br/>
-https://www.youtube.com/channel/UC7jwESeWKLcRbtxHwFS3A7Q/videos 
+Check my paper:<br/>
+M. Aldacher, M. Nasrollahpour, S. Hamedi-Hagh, **__“A low-power, high-resolution, 1 GHz differential comparator with low-offset and low-kickback”__**, 24th IEEE International Conference on Electronics, Circuits and Systems (ICECS), Year: 2017, Pages: 310 – 313. 
+
