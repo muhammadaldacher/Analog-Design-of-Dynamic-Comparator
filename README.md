@@ -45,10 +45,12 @@ In this test, We want to find the smallest difference between Vin_p & Vin_n that
 
 *****************
 ### References:
-My project on google drive:<br/>
+-> My project on google drive:<br/>
 https://drive.google.com/drive/folders/1W9ip4MpMZNf3IQsoFQkhgg6QaUya4Yp4 <br/>
-EE288 Lecture Notes:<br/>
-https://drive.google.com/drive/folders/12Qqfw_TX1i7dvVVYXksaSdHV4gth1OD5 <br/>
-Check my paper:<br/>
-M. Aldacher, M. Nasrollahpour, S. Hamedi-Hagh, **__“A low-power, high-resolution, 1 GHz differential comparator with low-offset and low-kickback”__**, 24th IEEE International Conference on Electronics, Circuits and Systems (ICECS), Year: 2017, Pages: 310 – 313. 
+-> EE288 Lecture Notes:<br/>
+https://drive.google.com/drive/folders/12Qqfw_TX1i7dvVVYXksaSdHV4gth1OD5 <br/><br/>
+-> Check our paper:<br/>
+M. Aldacher, M. Nasrollahpour, S. Hamedi-Hagh, **__“A low-power, high-resolution, 1 GHz differential comparator with low-offset and low-kickback”__**, 24th IEEE International Conference on Electronics, Circuits and Systems (ICECS), Year: 2017, Pages: 310 – 313. <br/><br/>
 
+-> Video: "How Clocked Comparators work?"<br/>
+https://www.youtube.com/watch?v=u1_9_BL5NjI
